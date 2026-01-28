@@ -1,6 +1,5 @@
 
 
-
 const vezeteknevek = [
   "Nagy", "Kovács", "Tóth", "Szabó", "Horváth",
   "Varga", "Kiss", "Molnár", "Németh", "Farkas"
@@ -20,6 +19,5 @@ function randomVernyomas() {
   const diasztoles = Math.floor(Math.random() * (100 - 60 + 1)) + 60;
   return `${szisztoles}/${diasztoles}`;
 }
-
 
 
