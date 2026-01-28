@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 
 
 const vezeteknevek = [
@@ -21,3 +23,16 @@ function randomVernyomas() {
 }
 
 
+const adatok = [];
+
+
+for (let i = 0; i < 20; i++) {
+  adatok.push({
+    nev: `${randomElem(vezeteknevek)} ${randomElem(keresztnevek)}`,
+    vernyomas: randomVernyomas()
+  });
+}
+
+
+const filePath = path.join("public", "test.json");
+fs.writeFileSync(filePath, JSON.stringify(adatok, null, 2), "utf-8");
